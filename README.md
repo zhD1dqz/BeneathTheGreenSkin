@@ -1,114 +1,114 @@
 # Beneath the Green Skin
 
-**一款由我独立设计并制作的 Unity 2D 俯视角动作冒险游戏。**
+**A solo-developed 2D top-down action-adventure game built with Unity.**
 
-在战斗与伪装之间切换，探索遭受哥布林入侵的王国，与同伴一起夺回失落的家园。
+Switch between combat and disguise, explore a kingdom under goblin invasion, and fight alongside your allies to reclaim its lands.
 
-![Beneath the Green Skin 游戏主菜单](docs/screenshots/main-menu.png)
+![Beneath the Green Skin main menu](docs/screenshots/main-menu.png)
 
-## 游戏简介
+## About the Game
 
-王国的和平被哥布林军队打破。一名身负重伤的骑士被村民救回，在苏醒后重新踏上旅途。他拥有一种特殊能力：化身为敌人的模样，在敌群中隐藏自己的身份。
+A goblin invasion has shattered the kingdom's peace. Rescued by villagers after being wounded in battle, a knight awakens and sets out once more. He possesses an unusual ability: taking the form of an enemy to conceal his identity among the goblins.
 
-玩家将扮演这名骑士，探索村庄、矿区与敌人据点，通过与 NPC 对话接受任务，在近战、防御、变身伪装和弓箭手支援之间选择合适的行动，逐步推进王国的反击。
+Play as the knight as you explore villages, mines, and enemy strongholds. Meet NPCs, take on quests, and combine melee combat, defense, transformation, and archer support to help the kingdom fight back.
 
-| 项目 | 内容 |
+| Overview | Details |
 | --- | --- |
-| 游戏类型 | 单人 · 2D 俯视角 · 动作冒险 |
-| 开发方式 | 个人独立设计与制作 |
-| 开发工具 | Unity 2022.3.62f3c1 / C# |
-| 主要技术 | Tilemap、Animator、Physics 2D、Cinemachine、TextMesh Pro |
-| 游戏内文本 | 英文 |
-| 当前状态 | 开发与打磨中；本仓库用于作品展示，暂未发布可运行版本 |
+| Genre | Single-player · 2D top-down · Action-adventure |
+| Development | Solo design and development |
+| Engine and language | Unity 2022.3.62f3c1 / C# |
+| Core tools | Tilemap, Animator, Physics 2D, Cinemachine, TextMesh Pro |
+| In-game language | English |
+| Status | In development; this repository showcases the project, with no playable release available yet |
 
-## 独立设计与制作
+## My Role
 
-本项目由我独立设计并制作，负责从玩法构思、关卡搭建到功能实现与整合的开发工作，主要包括：
+I independently designed and developed this project, taking it from gameplay concepts and level construction through implementation and integration. My work includes:
 
-- **玩法设计与实现**：角色移动、普通攻击与长按重击、防御、伤害反馈、变身伪装和弓箭手支援。
-- **敌人与战斗设计**：普通敌人、投弹敌人、精英敌人，以及巨魔与萨满 Boss 的行为和战斗流程。
-- **剧情与关卡设计**：序章及三个任务阶段、NPC 对话、任务触发、区域解锁与剧情演出。
-- **场景搭建与环境表现**：利用 Tilemap 和美术资源搭建村庄、矿区、室内与敌人据点，并整合昼夜、灯光、降雨、水面与积水效果。
-- **UI 与流程整合**：主菜单、角色状态面板、任务日志、对话界面、存档继续、死亡重生和结尾流程。
-- **测试与迭代**：调试任务推进、战斗反馈、场景交互及界面表现。
+- **Gameplay design and programming:** player movement, normal attacks, hold-to-perform heavy attacks, defense, damage feedback, transformation, and archer support.
+- **Enemy and encounter design:** standard, bomb-throwing, and elite enemies, along with the behaviors and encounter flow of the Troll and Shaman bosses.
+- **Narrative and level design:** a prologue and three quest stages, NPC dialogue, quest triggers, area progression, and scripted sequences.
+- **World building and environmental presentation:** constructing villages, mines, interiors, and enemy strongholds with Tilemaps and art assets, and integrating day/night changes, lighting, rain, water, and puddle effects.
+- **UI and game flow:** the main menu, player status HUD, quest journal, dialogue interface, save/continue functionality, death and respawn, and the ending sequence.
+- **Testing and iteration:** refining quest progression, combat feedback, world interactions, and interface presentation.
 
-角色、建筑、地形和部分 UI 等基础美术使用 **Pixel Frog 的 Tiny Swords 资源包**。独立制作指本项目的设计、开发与整合工作；第三方美术素材的作者与权利归属见下方说明。
+The project uses **Pixel Frog's Tiny Swords asset pack** for characters, buildings, terrain, and some UI elements. Solo development refers to my design, programming, and integration work. Third-party artwork is credited to its original creators below.
 
-## 核心玩法与系统
+## Gameplay and Systems
 
-### 近战、防御与不同类型的敌人
+### Melee Combat, Defense, and Enemy Encounters
 
-玩家可通过普通攻击、长按重击和防御应对不同的敌人。战斗结合攻击动作、受击反馈和状态面板，让玩家观察自己的生命、攻击与防御状态，并调整交战节奏。
+Use normal attacks, heavy attacks, and defense to respond to different enemies. Attack animations, hit feedback, and the status HUD help communicate combat state, while health, attack, and defense values inform the player's decisions.
 
-| 普通攻击 | 长按重击 |
+| Normal Attack | Heavy Attack |
 | --- | --- |
-| ![骑士进行普通攻击](docs/screenshots/normal-attack.png) | ![骑士进行重击](docs/screenshots/strong-attack.png) |
+| ![The knight performing a normal attack](docs/screenshots/normal-attack.png) | ![The knight performing a heavy attack](docs/screenshots/strong-attack.png) |
 
 <details>
-<summary>查看巨魔与萨满 Boss 战截图</summary>
+<summary>View the Troll and Shaman boss encounters</summary>
 
-| 巨魔 Boss | 哥布林萨满 Boss |
+| Troll Boss | Goblin Shaman Boss |
 | --- | --- |
-| ![巨魔 Boss 战](docs/screenshots/troll-boss.png) | ![萨满 Boss 战与法术攻击](docs/screenshots/shaman-boss.png) |
+| ![Troll boss encounter](docs/screenshots/troll-boss.png) | ![Shaman boss encounter with a magical attack](docs/screenshots/shaman-boss.png) |
 
 </details>
 
-### 变身伪装与弓箭手支援
+### Transformation, Disguise, and Archer Support
 
-骑士可以在人类与火把哥布林形态之间切换。未暴露身份时，哥布林形态能够避开敌人的常规侦测；主动造成伤害则会暴露伪装。变身也受到战斗状态限制，需要提前选择使用时机。
+The knight can switch between human and Torch Goblin forms. While his identity remains concealed, the goblin form avoids normal enemy detection. Dealing damage reveals the disguise. Transformation is also restricted by combat state, encouraging players to choose when to use it.
 
-随着剧情推进，玩家可以解锁同伴 **Hawkeye** 的弓箭支援，进入瞄准模式、选择敌人并呼叫远程攻击。支援技能带有冷却与界面提示。
+As the story progresses, players can unlock support from their ally **Hawkeye**. Enter targeting mode, select an enemy, and call in a ranged attack. The ability includes a cooldown and on-screen feedback.
 
-| 哥布林形态与伪装 | Hawkeye 弓箭支援 |
+| Goblin Disguise | Hawkeye's Archer Support |
 | --- | --- |
-| ![玩家变身为火把哥布林](docs/screenshots/goblin-form.png) | ![Hawkeye 弓箭支援与技能冷却界面](docs/screenshots/archer-support.png) |
+| ![The player transformed into a Torch Goblin](docs/screenshots/goblin-form.png) | ![Hawkeye's archer support and skill cooldown UI](docs/screenshots/archer-support.png) |
 
-### 剧情、对话与任务推进
+### Story, Dialogue, and Quest Progression
 
-游戏以**苏醒、夺回矿区、营救 Hawkeye、最终决战**构成主要冒险流程。NPC 对话、敌人目标与剧情演出共同驱动阶段变化，任务日志同步显示当前主线和支线目标，区域随进度逐步开放。
+The adventure follows four main stages: **Awakening, Reclaim the Mine, Rescue Hawkeye, and The Final Battle**. NPC conversations, enemy objectives, and scripted sequences drive progression. The quest journal tracks main and side objectives, while new areas open as the story advances.
 
-游戏还整合了开场叙事、镜头演出、存档与继续、死亡后按当前阶段重试，以及完成主线后的结尾流程。
+The game also integrates opening narration, camera sequences, saving and continuing, retries from the current story stage after death, and an epilogue after completing the main quest.
 
-![与国王对话并更新任务日志](docs/screenshots/dialogue-quest.png)
+![Speaking with the King and updating the quest journal](docs/screenshots/dialogue-quest.png)
 
-### 昼夜、天气与休息
+### Day and Night, Weather, and Rest
 
-世界时间驱动昼夜变化与场景灯光，深夜疲劳会影响角色属性；玩家可以回家休息至早晨。降雨、地面雨滴、水面与积水效果共同丰富探索过程中的环境氛围。
+The world clock drives day/night changes and scene lighting. Late-night fatigue affects the knight's attributes, and players can return home to rest until morning. Rain, ground splashes, water, and puddle effects add atmosphere to exploration.
 
-| 白天探索 | 深夜疲劳与室内休息 |
+| Daytime Exploration | Midnight Fatigue and Rest |
 | --- | --- |
-| ![白天的村庄探索](docs/screenshots/daylight.png) | ![深夜疲劳状态与家中的休息交互](docs/screenshots/midnight-fatigue.png) |
+| ![Exploring the village during the day](docs/screenshots/daylight.png) | ![Night fatigue and the rest interaction at home](docs/screenshots/midnight-fatigue.png) |
 
-![村庄中的降雨与地面积水效果](docs/screenshots/rain-puddles.png)
+![Rain and ground puddle effects in the village](docs/screenshots/rain-puddles.png)
 
-## 基本操作
+## Controls
 
-| 输入 | 功能 |
+| Input | Action |
 | --- | --- |
-| `W A S D` / 方向键 | 移动 |
-| 鼠标左键单击 | 普通攻击 |
-| 长按鼠标左键 | 重击 |
-| 按住鼠标右键 | 防御 |
-| `Q` | 切换人类 / 哥布林形态，受当前战斗状态限制 |
-| `E` | 与 NPC 交谈，以场景提示为准 |
-| `F` | 建筑进出、治疗、休息等场景交互，以提示为准 |
-| `Space` | 推进对话 |
-| `R` → 左键选择目标 | 使用弓箭支援，需要先通过剧情解锁 |
-| 瞄准时按 `R` / `Esc` | 取消弓箭支援瞄准 |
-| `Esc` | 暂停 / 返回游戏 |
+| `W A S D` / Arrow keys | Move |
+| Left mouse click | Normal attack |
+| Hold left mouse button | Heavy attack |
+| Hold right mouse button | Defend |
+| `Q` | Switch between human and goblin forms, subject to combat restrictions |
+| `E` | Talk to NPCs; follow the on-screen prompt |
+| `F` | World interactions such as entering buildings, healing, and resting; follow the on-screen prompt |
+| `Space` | Advance dialogue |
+| `R`, then left-click a target | Use archer support after unlocking it through the story |
+| `R` / `Esc` while targeting | Cancel archer support targeting |
+| `Esc` | Pause / Resume |
 
-## 美术资源与致谢
+## Art Assets and Acknowledgments
 
-本项目使用 **[Tiny Swords](https://pixelfrog-assets.itch.io/tiny-swords)** 美术资源包，作者为 **[Pixel Frog](https://pixelfrog-assets.itch.io/)**，包含项目中使用的 Free Pack、Enemy Pack 及相关更新素材。感谢作者提供的角色、动画、建筑、地形、装饰与 UI 资源。
+This project uses the **[Tiny Swords](https://pixelfrog-assets.itch.io/tiny-swords)** asset pack by **[Pixel Frog](https://pixelfrog-assets.itch.io/)**, including assets from the Free Pack, Enemy Pack, and related updates. Many thanks to the creator for the character sprites, animations, buildings, terrain, decorations, and UI assets.
 
-Tiny Swords 及其他第三方资源的权利归各自作者所有，不属于本项目的原创美术。资源的使用与再分发应遵循其适用许可；请从官方渠道获取素材。本仓库仅展示游戏截图与项目说明，不附带第三方原始资源包。
+Tiny Swords and other third-party assets remain the property of their respective creators and are not claimed as original artwork for this project. Their use and redistribution are subject to their applicable licenses. Please obtain assets from their official sources. This repository contains project documentation and game screenshots, without the original third-party asset files.
 
-更多说明见 [CREDITS.md](CREDITS.md)。
+See [CREDITS.md](CREDITS.md) for further attribution details.
 
-## 项目状态与后续计划
+## Development Status and Future Releases
 
-项目仍在持续修改与打磨。本仓库当前提供游戏介绍和实机截图，**暂不包含 Unity 工程、可执行文件或 Release 下载包**。
+The game is still being refined. This repository currently provides an overview and gameplay screenshots. **It does not include the Unity project, executable builds, or a downloadable release.**
 
-后续将继续调整游戏体验、战斗平衡和表现细节，完成测试后再构建可运行版本，并通过 GitHub Releases 发布。
+Further work will focus on gameplay refinement, combat balance, and presentation. A playable build is planned for GitHub Releases once these improvements and testing are complete.
 
-截图来自开发中的实际游戏画面，最终版本可能有所调整。
+All screenshots show the game in development. The final version may differ.
