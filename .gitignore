@@ -1,0 +1,49 @@
+# Unity generated folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Local editors and generated project files
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.opendb
+*.VC.db
+sysinfo.txt
+UpgradeLog*.htm
+
+# Local exports and packaged builds
+/output/
+*.unitypackage
+*.apk
+*.aab
+*.app
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# This is a showcase repository. The Unity project is kept locally.
+# These paths can contain third-party assets and are deliberately excluded.
+/Assets/
+/Packages/
+/ProjectSettings/
