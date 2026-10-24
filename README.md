@@ -6,6 +6,38 @@ Switch between combat and disguise, explore a kingdom under goblin invasion, and
 
 ![Beneath the Green Skin main menu](docs/screenshots/main-menu.png)
 
+## Download and Play
+
+**For players and academic reviewers: [open GitHub Releases to download the Windows demo](https://github.com/zhD1dqz/BeneathTheGreenSkin/releases).**
+
+You need a **Windows 64-bit PC, a keyboard, and a mouse**. Unity Editor and the project source files are not required.
+
+1. Open the [Releases page](https://github.com/zhD1dqz/BeneathTheGreenSkin/releases) and select the most recent Windows demo release. A development demo may be marked **Pre-release**.
+2. Under **Assets**, download **`BeneathTheGreenSkin-Windows-x64.zip`** (approximately 45 MB). Choose this named game package; GitHub's automatically generated **Source code** archives contain the repository files and do not include the playable game.
+3. **Extract the entire ZIP** to a folder on your computer. On Windows, you can right-click the ZIP and select **Extract All**. Run the extracted copy rather than opening the executable inside the ZIP.
+4. Open the extracted `BeneathTheGreenSkin-Windows-x64` folder and double-click **`BeneathTheGreenSkin.exe`**.
+5. Choose **NEW GAME** to experience the opening and start the adventure from the beginning. During the opening narration, wait briefly for each page, then press **Space** or **Enter** to advance; the pages also advance automatically.
+6. Once gameplay begins, use **WASD / Arrow keys** to move, follow the interaction prompts, and speak with the nearby soldier. Press **Space** to finish the whole conversation, then follow the **Quest Journal** to meet the King and continue the story. See [Controls](#controls) below for combat and abilities.
+
+Keep the extracted files together. The folder includes:
+
+```text
+BeneathTheGreenSkin-Windows-x64/
+├── BeneathTheGreenSkin.exe       ← Launch this file
+├── BeneathTheGreenSkin_Data/
+├── MonoBleedingEdge/
+├── UnityPlayer.dll
+├── UnityCrashHandler64.exe
+├── README.txt
+└── CREDITS.txt
+```
+
+The executable depends on the accompanying folders and DLLs. If you move the game to another computer, copy the entire extracted folder or share the complete ZIP.
+
+For a first review, **NEW GAME** provides the complete introduction and quest progression. **CONTINUE** resumes a locally saved game. To save progress, press **Esc** and use **Save & Quit** in the pause menu before returning later.
+
+If the named Windows ZIP is not listed under a release's **Assets**, the playable package has not been published there yet.
+
 ## About the Game
 
 A goblin invasion has shattered the kingdom's peace. Rescued by villagers after being wounded in battle, a knight awakens and sets out once more. He possesses an unusual ability: taking the form of an enemy to conceal his identity among the goblins.
@@ -19,7 +51,7 @@ Play as the knight as you explore villages, mines, and enemy strongholds. Meet N
 | Engine and language | Unity 2022.3.62f3c1 / C# |
 | Core tools | Tilemap, Animator, Physics 2D, Cinemachine, TextMesh Pro |
 | In-game language | English |
-| Status | In development; this repository showcases the project, with no playable release available yet |
+| Status | In development; see Download and Play above for Windows demo instructions |
 
 ## My Role
 
@@ -105,10 +137,12 @@ Tiny Swords and other third-party assets remain the property of their respective
 
 See [CREDITS.md](CREDITS.md) for further attribution details.
 
-## Development Status and Future Releases
+## Development Status
 
-The game is still being refined. This repository currently provides an overview and gameplay screenshots. **It does not include the Unity project, executable builds, or a downloadable release.**
+The game is still being refined. A Windows x64 demo has been built for evaluation and is packaged separately for distribution through [GitHub Releases](https://github.com/zhD1dqz/BeneathTheGreenSkin/releases). Follow [Download and Play](#download-and-play) above to obtain and launch a published build.
 
-Further work will focus on gameplay refinement, combat balance, and presentation. A playable build is planned for GitHub Releases once these improvements and testing are complete.
+This repository contains the project overview, credits, and screenshots. The complete playable ZIP belongs in a release's Assets section. The Unity project and original third-party asset files are not included in the repository.
+
+Further work will focus on gameplay refinement, combat balance, and presentation, with updated builds published through Releases as development continues.
 
 All screenshots show the game in development. The final version may differ.
